@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio 21 Dias | Thamires Carvalho Nutrição Clínica</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="/_sdk/element_sdk.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
@@ -30,21 +31,32 @@
   </script>
   <style>
     html, body { height: 100%; }
-    .gradient-lavanda { background: linear-gradient(135deg, #a78bb4 0%, #8a6e9a 100%); }
+    .gradient-lavanda {
+      background: linear-gradient(135deg, #a78bb4 0%, #8a6e9a 100%);
+    }
     .text-gradient {
       background: linear-gradient(135deg, #a78bb4 0%, #cdaf98 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-    .card-hover { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(167, 139, 180, 0.15); }
-    .btn-pulse { animation: pulse-soft 2s infinite; }
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(167, 139, 180, 0.15);
+    }
+    .btn-pulse {
+      animation: pulse-soft 2s infinite;
+    }
     @keyframes pulse-soft {
       0%, 100% { box-shadow: 0 0 0 0 rgba(167, 139, 180, 0.4); }
       50% { box-shadow: 0 0 0 15px rgba(167, 139, 180, 0); }
     }
-    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    .fade-in {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -54,8 +66,12 @@
                         radial-gradient(circle at 80% 20%, rgba(205, 175, 152, 0.08) 0%, transparent 50%),
                         radial-gradient(circle at 40% 80%, rgba(167, 139, 180, 0.05) 0%, transparent 50%);
     }
-    .scroll-smooth { scroll-behavior: smooth; }
+    .scroll-smooth {
+      scroll-behavior: smooth;
+    }
   </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full bg-cream font-sans text-gray-700 overflow-auto scroll-smooth">
   <div class="w-full min-h-full">
@@ -63,38 +79,40 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="flex items-center justify-between h-16 sm:h-20">
       <div class="flex items-center gap-2">
-       <img src="logo-top.png" alt="Logo" class="h-10 w-auto">
-       <span id="nav-brand" class="font-display text-xl sm:text-2xl font-semibold text-lavanda">TC Nutrição</span>
-      </div>
-      <a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full gradient-lavanda text-white font-medium text-sm hover:opacity-90 transition-opacity"> Inscreva-se </a>
+       <div class="w-10 h-10 rounded-full gradient-lavanda flex items-center justify-center overflow-hidden">
+        <img src="logo-top.png" alt="Logo" class="w-full h-full object-cover">
+       </div><span id="nav-brand" class="font-display text-xl sm:text-2xl font-semibold text-lavanda">TC Nutrição</span>
+      </div><a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full gradient-lavanda text-white font-medium text-sm hover:opacity-90 transition-opacity"> Inscreva-se </a>
      </div>
     </div>
-   </nav>
-
-   <section class="relative min-h-screen pt-20 sm:pt-24 pattern-bg overflow-hidden">
+   </nav><section class="relative min-h-screen pt-20 sm:pt-24 pattern-bg overflow-hidden">
+    <div class="absolute top-20 right-0 w-96 h-96 bg-lavanda/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-areia/20 rounded-full blur-3xl"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20 lg:py-28">
      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="order-2 lg:order-1 text-center lg:text-left fade-in">
        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lavanda/10 text-lavanda font-medium text-sm mb-6">
         <span class="w-2 h-2 rounded-full bg-lavanda animate-pulse"></span> Vagas Limitadas
        </div>
-       <h1 id="hero-title" class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6"><span class="text-gradient">21 Dias</span> com a Nutri</h1>
-       <p id="hero-subtitle" class="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">Não é sobre cortar o que você gosta, é sobre ter <strong class="text-lavanda">consciência</strong>.</p>
+       <h1 id="hero-title" class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-6"><span class="text-gradient">21 Dias</span> com a Nutri: Retome o controle da sua saúde, melhore sua disposição e transforme sua <span class="text-lavanda">autoestima</span>.</h1>
+       <p id="hero-subtitle" class="text-lg sm:text-xl text-gray-600 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">Não é sobre cortar o que você gosta, é sobre ter <strong class="text-lavanda">consciência</strong>. Um desafio prático para destravar seus resultados em 3 semanas.</p>
        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-        <a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" id="cta-button" class="btn-pulse inline-flex items-center justify-center px-8 py-4 rounded-full gradient-lavanda text-white font-semibold text-lg shadow-lg"> QUERO GARANTIR MINHA VAGA </a>
+        <a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" id="cta-button" class="btn-pulse inline-flex items-center justify-center px-8 py-4 rounded-full gradient-lavanda text-white font-semibold text-lg shadow-lg shadow-lavanda/30 hover:shadow-xl hover:shadow-lavanda/40 transition-all"> QUERO GARANTIR MINHA VAGA </a>
        </div>
-      </div>
-      <div class="order-1 lg:order-2 flex justify-center lg:justify-end fade-in">
+      </div><div class="order-1 lg:order-2 flex justify-center lg:justify-end fade-in" style="animation-delay: 0.2s;">
        <div class="relative">
         <div class="absolute inset-0 gradient-lavanda rounded-3xl rotate-6 opacity-20"></div>
-        <img id="hero-photo" src="foto-hero.jpg" alt="Thamires Carvalho" class="w-72 h-96 sm:w-80 sm:h-[450px] lg:w-96 lg:h-[500px] rounded-3xl object-cover shadow-2xl z-10 relative">
+        <img id="hero-photo" src="foto-hero.jpg" alt="Thamires Carvalho" class="w-72 h-96 sm:w-80 sm:h-[450px] lg:w-96 lg:h-[500px] rounded-3xl object-cover shadow-2xl relative z-10">
+        <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-areia rounded-2xl flex items-center justify-center shadow-lg z-20">
+         <div class="text-center">
+          <span class="block font-display text-3xl font-bold text-white">21</span> <span class="text-xs text-white/80">dias</span>
+         </div>
+        </div>
        </div>
       </div>
      </div>
     </div>
-   </section>
-
-   <section class="py-20 sm:py-28 bg-offwhite relative overflow-hidden">
+   </section><section class="py-20 sm:py-28 bg-offwhite relative overflow-hidden">
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="order-2 lg:order-1">
@@ -103,41 +121,36 @@
        <p class="text-lavanda font-medium text-lg mb-6">Nutricionista Clínica | CRN 11983P</p>
        <p id="nutri-bio-display" class="text-gray-600 text-lg leading-relaxed mb-8">Apaixonada por nutrição clínica e pelo poder transformador de uma alimentação consciente.</p>
        <div class="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-xl inline-flex">
-         <img src="logo-bio.png" alt="Logo Bio" class="w-12 h-12 rounded-full">
+         <img src="logo-bio.png" alt="Logo" class="w-12 h-12 rounded-full">
          <div>
            <p class="font-bold text-gray-800">Thamires Carvalho</p>
            <p class="text-xs text-lavanda">Nutrição Clínica</p>
          </div>
        </div>
       </div>
-      <div class="order-1 lg:order-2 flex justify-center">
-       <img id="about-photo" src="foto-bio.jpg" alt="Thamires Carvalho" class="w-72 h-80 sm:w-80 sm:h-96 rounded-3xl object-cover border-4 border-white shadow-2xl">
+      <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+       <div class="relative">
+        <img id="about-photo" src="foto-bio.jpg" alt="Thamires Carvalho" class="w-72 h-80 sm:w-80 sm:h-96 rounded-3xl object-cover border-4 border-white shadow-2xl">
+       </div>
       </div>
      </div>
     </div>
-   </section>
-
-   <section id="inscricao" class="py-20 sm:py-28 gradient-lavanda text-center">
+   </section><section id="inscricao" class="py-20 sm:py-28 gradient-lavanda text-center">
     <div class="max-w-4xl mx-auto px-4">
-     <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-8">Coloque-se como prioridade hoje.</h2>
-     <a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" id="final-cta" class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-lavanda font-bold text-lg shadow-2xl hover:scale-105 transition-all"> 
-       INSCREVA-SE PELO WHATSAPP 
-     </a>
+     <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">A sua mudança pode estar mais próxima do que imagina.</h2>
+     <a href="https://wa.me/message/KSTKJVZCOJJMF1" target="_blank" id="final-cta" class="inline-flex items-center justify-center px-10 py-5 rounded-full bg-white text-lavanda font-bold text-lg shadow-2xl hover:scale-105 transition-all"> INSCREVA-SE AGORA PELO WHATSAPP </a>
     </div>
-   </section>
-
-   <footer class="bg-gray-900 py-12 text-center text-white/50">
+   </section><footer class="bg-gray-900 py-12 text-center text-white/40">
      <p>© 2026 Thamires Carvalho Nutrição Clínica. Todos os direitos reservados.</p>
      <div class="flex justify-center gap-4 mt-4">
-       <a href="https://www.instagram.com/thamirescarvalhonutri?igsh=MW14YmZnaXdrNnduNA%3D%3D&utm_source=qr" target="_blank" class="hover:text-lavanda transition-colors">Instagram</a>
+      <a href="https://www.instagram.com/thamirescarvalhonutri?igsh=MW14YmZnaXdrNnduNA%3D%3D&utm_source=qr" target="_blank" class="hover:text-lavanda transition-colors">Instagram</a>
      </div>
-     <p class="text-xs mt-4">Desenvolvido por Joseph.</p>
+     <p class="text-xs mt-4">Orgulhosamente desenvolvido por Joseph.</p>
    </footer>
   </div>
-
   <script>
     const defaultConfig = {
-      hero_title: '21 Dias com a Nutri: Retome o controle da sua saúde e transforme sua autoestima.',
+      hero_title: '21 Dias com a Nutri: Retome o controle da sua saúde, melhore sua disposição e transforme sua autoestima.',
       hero_subtitle: 'Não é sobre cortar o que você gosta, é sobre ter consciência. Um desafio prático para destravar seus resultados em 3 semanas.',
       cta_text: 'QUERO GARANTIR MINHA VAGA',
       whatsapp_link: 'https://wa.me/message/KSTKJVZCOJJMF1',
@@ -147,18 +160,29 @@
       nutri_bio: 'Apaixonada por nutrição clínica e pelo poder transformador de uma alimentação consciente. Meu propósito é ajudar pessoas a alcançarem saúde e bem-estar sem sofrimento.',
       background_color: '#faf7f4',
       primary_color: '#a78bb4',
-      secondary_color: '#cdaf98'
+      secondary_color: '#cdaf98',
+      text_color: '#374151',
+      surface_color: '#f1e8e1'
     };
 
-    function updateSite(config) {
-      document.getElementById('hero-photo').src = config.hero_photo_url;
-      document.getElementById('about-photo').src = config.about_photo_url;
-      document.getElementById('cta-button').href = config.whatsapp_link;
-      document.getElementById('final-cta').href = config.whatsapp_link;
+    async function onConfigChange(config) {
+      const heroPhoto = document.getElementById('hero-photo');
+      const aboutPhoto = document.getElementById('about-photo');
+      const ctaButton = document.getElementById('cta-button');
+      const finalCta = document.getElementById('final-cta');
+
+      if (heroPhoto) heroPhoto.src = config.hero_photo_url || defaultConfig.hero_photo_url;
+      if (aboutPhoto) aboutPhoto.src = config.about_photo_url || defaultConfig.about_photo_url;
+      
+      const link = config.whatsapp_link || defaultConfig.whatsapp_link;
+      if (ctaButton) ctaButton.href = link;
+      if (finalCta) finalCta.href = link;
     }
 
-    // Garante que o site carregue os dados locais imediatamente
-    window.addEventListener('DOMContentLoaded', () => updateSite(defaultConfig));
+    // DISPARO MANUAL PARA O GITHUB PAGES
+    window.addEventListener('DOMContentLoaded', () => {
+      onConfigChange(defaultConfig);
+    });
   </script>
  </body>
 </html>
